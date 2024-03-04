@@ -1,0 +1,56 @@
+## 快速开始
+
+### 通过 SSH Key 登录（推荐）
+
+#### Linux/MacOS
+
+1. 在 Ubuntu 或 Mac 上，使用以下命令生成 rsa SSH 公钥/私钥对：
+
+    ```
+    ssh-keygen -t rsa
+    ```
+
+2. 强制守护进程加载新私钥，并确认已加载：
+
+    ```
+    ssh-add; ssh-add -l
+    ```
+
+3. 获取公钥内容：
+
+    ```
+    cat ~/.ssh/id_rsa.pub
+    ```
+
+4. 将输出复制到 [个人中心](https://console.ppio.cloud/#/personalCenter) 下的 "SSH 公钥" 文本框中。确保包含 "ssh-rsa" 和 "user@something"。
+
+    SSH 密钥示例：
+
+    ```
+    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDopiaR1Q6Na6dW1QTK7hMuHVi+gXqutY5pUvrWCgeyjcBtBLHejxDQjdNt+qWQRORK/fZzrmyA8/ghani0rZlGPN3bYw1RXFHitt+bD1jVgtJzOmjMQdpMVALnZASQMoQQcCqVJ8PG5Xc08TciACS7S/Ltz3VdZfIq1tih969GCzCe3sctSFBuTwqUDnyrQ6iqSBhPSfQS7nCC/CwzMi3rDg0JzW2NHzIBsbvy0gdXy1ZtC4kkCr7/lUWAgZLk52v3s2CTXCg6QXnhWx+Q/dHOJVAEEucY4o8bo4rF4Bj+ifgEHFtUEfoK9+yj3OLbWfpIxyzhHK+nNXz3UaOMSC8D ultra@ppio
+    ```
+
+#### Windows
+
+Windows 需要额外的命令行工具如 Cmder 生成 SSH 密钥，操作与 Linux 一致。
+
+大多数机器学习和 AI 编程都是在 Linux 上完成的，我们强烈建议您在 Windows 机器上安装一个 Linux 子系统，比如 WSL。
+
+
+
+## 常见故障
+
+如果您遇到 "Permission denied(publickey)" 的报错时，可能是以下原因：
+
+- 尝试从实例内部运行 SSH/SCP
+- 密钥设置不正确或使用了错误/不匹配的密钥
+- 使用的 SSH 密钥格式不正确/不支持
+- 私钥未通过 `ssh-add` 正确加载，可能需使用 `-i` 参数
+- 新增或更新密钥后，对已创建资源不生效
+- SSH 密钥权限设置不正确
+
+使用 `ssh -vv` 命令获取详细信息。
+
+### 通过密码登录
+
+在 [我的实例](https://console.ppio.cloud/#/mainInstance) 页面复制 SSH 登录命令到终端或 SSH 工具，并使用页面提供的密码登录。

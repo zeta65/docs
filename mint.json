@@ -50,36 +50,30 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "产品简介",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "gpudocs/产品简介/01-什么是 GPU 容器云",
+        "gpudocs/产品简介/02-02-产品优势",
+        "gpudocs/产品简介/03-应用场景",
+        "gpudocs/04-规格清单"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "产品计费",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "gpudocs/产品计费/01-计费说明"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "快速入门",
       "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "gpudocs/快速入门/01-准备工作",
+        "gpudocs/快速入门/02-购买 GPU 容器云实例",
+        "gpudocs/快速入门/03-管理 GPU 容器云实例",
+        "gpudocs/快速入门/04-JupyterLab",
+        "gpudocs/快速入门/05-SSH",
+        "gpudocs/快速入门/06-管理镜像.mdx",
+        "gpudocs/快速入门/07-管理云存储"
       ]
     }
   ],
